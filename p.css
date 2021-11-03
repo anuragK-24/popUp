@@ -1,0 +1,93 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+  h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .bu{
+    text-align: center;
+    margin-top:200px;
+    overflow:0;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    width: 500px;
+    max-width: 80%;
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+    background-color: rgb(140, 156, 177);
+  }
+  
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  
+  .modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: rgb(209, 8, 8);
+  }
+  
+  .modal-body {
+    padding: 10px 15px;
+    background-color: rgb(102, 108, 160);
+  }
+  
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(39, 87, 177, 0.5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+.sButton{
+    background-color: rgb(47, 36, 145);
+    color: white;
+    border-radius: 7px;
+    padding: 15px 32px;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    transform: translate(0,3);
+    transition-duration: 0.4s;
+    height: 60px;
+    width:200px;
+}
+button:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
